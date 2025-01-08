@@ -24,6 +24,7 @@ class Booking(models.Model):
     services = models.ForeignKey(Services,on_delete=models.CASCADE,
                                 related_name='service',
                                 related_query_name='services')
+    meeting_link = models.CharField(max_length=256,null=True,blank=True)
 
     class Meta:
         db_table = 'bookings'
